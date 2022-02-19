@@ -10,9 +10,6 @@ public class TryProcessing extends PApplet{
     public static final int DIAMETER = 70;
     public static final int START = 200;
 
-    public static int increment = 0;
-
-
     ArrayList<Ball> ballList = new ArrayList<>();
 
     public static void main(String[] args) {
@@ -45,10 +42,7 @@ public class TryProcessing extends PApplet{
     public void draw() {
 
         moveBalls();
-//        updateBallsPosition();
-//        DisplayBalls();
 
-//        move4Circles();
     }
 
 
@@ -82,30 +76,15 @@ public class TryProcessing extends PApplet{
 
     private Ball setBallParameters(int position, Ball ball) {
 
-        ball.setDiameter(70);
+        ball.setDiameter(DIAMETER);
         ball.setPositionX(START);
         ball.setPositionY(getHeightPosition(position));
 
         return ball;
     }
 
-//    private void move4Circles() {
-//
-//        for (int i = 1; i <= 4; i ++) {
-//            ellipse(getWidthPosition(i), getHeightPosition(i), DIAMETER, DIAMETER);
-//        }
-//
-//        increment += 1;
-//
-//    }
-
     private int getHeightPosition(int i) {
         return i * ONE_HEIGHT_UNIT;
     }
-
-//    private int getWidthPosition(int i) {
-//        return START + increment * i;
-//    }
-
 
 }
